@@ -1,0 +1,83 @@
+\documentclass[pdftex,12pt,a4paper]{article}%Documento no formato de artigo,Esta %deve ser SEMPRE a primeira linha válida no documento.
+\usepackage[english,brazil,portuges]{babel}%Hifenização em portugues
+\usepackage{amssymb, amsmath, pxfonts} %permite simbolos matemáticos
+\usepackage[ansinew]{inputenc}% acentuação
+\usepackage{graphicx} %permite inserir figura
+\usepackage[top=3cm,left=3cm,right=2cm,bottom=3cm]{geometry} %margens
+\usepackage{indentfirst}%Faz indentação da primeira linha
+\usepackage{microtype}% pacote para ajustar os fontes em cada linha de forma a
+% respeitar as margens
+\usepackage{url}%comando para chamar paginas web
+\begin{document}%Inicio do documento
+\pagestyle{empty}%alinha os textos à página
+
+\title{\Large Técnicas para Análise de Multidões - Estado da Arte}%título do artigo
+%a palavra Large significa que é para pegar a linha inteira
+
+\author{\Large Joana D'arc P.Barbosa\textsuperscript{1}\\
+	Departamento de Ciência da Computação – Instituto Federal de Ciência e\\
+		{\tiny }	  Tecnologia do Sudeste de Minas Gerais - Campus Rio Pomba (IFSEMG)		\textsuperscript{1}\\
+				  Av. Dr. José Sebastião da Paixão s/no – Bairro Lindo Vale\\ 
+						  CEP: 36180-000 - Rio Pomba – MG – Brasil\\
+                       \texttt{|Jdarc304|@gmail.com}}
+\date{\today.}%configura a data do dia da compilação
+\maketitle
+\textit{%coloca o texto dos resumos em itálico	
+\selectlanguage{english}%resumo em inglês
+\begin{abstract}This article we discuss some important concepts about the processing area pictures, which is responsible for studying technical digital image processing. There are various applications associated with the image processing that try solve certain types of problems in different areas. This article will be directed to the area of crowds Analysis, it is a subarea of the image processing that have had a significant breakthrough in research.will present an introductory way some articles related to the subject and the enda brief discussion of the techniques used in each for their development.
+\end{abstract}%fim do resumo em inglês
+}
+\textit{%coloca o texto dos resumos em itálico	
+\begin{abstract}Neste artigo iremos abordar alguns conceitos importantes sobre a área de Processamento de imagens, que é responsável por estudar as técnicas de transformações de imagens digitais. Existem diversas aplicações associadas ao Processamento de imagens que buscam solucionar alguns tipos de problemas de diversas áreas.Este artigo será direcionado para a área de Análise de multidões, é uma subárea do Processamento de imagens que têm tido um avanço significativo em pesquisas.Apresentaremos de forma introdutória alguns artigos relacionados ao tema e ao final uma breve discussão sobre as técnicas utilizadas em cada um para o desenvolvimento dos mesmos.
+\end{abstract}
+}
+
+\newpage
+\section{Introdução}
+A área de Processamento de Imagens tem obtido grandes avanços ao longo dos anos.    Diversas pesquisas estão sendo realizadas na área permitindo a resolução de problemas cada vez mais complexos.
+Processar uma imagem é qualquer forma de processamento de dados no qual existe uma imagem de entrada e uma de saída após ser transformada sucessivamente com o propósito de obter-se informação nela presente. Existem três tipos básicos de processamento: análise, síntese e transformação. A análise transforma imagens em dados, a síntese transforma dados em imagens e a transformação converte uma imagem em outra.\par Por se tratar de uma área muito ampla, Processamento de imagens tem beneficiado várias ciências e não só a computação.Algumas das áreas de atuação que podemos citar são a segurança, medicina,física, etc.
+Quando se trata de  segurança,ambientes que contém grande movimentação de pessoas é importante ser estudado para detectar qualquer irregularidade, mas é um trabalho complexo e de alto custo.
+\par Atualmente cenas altamente povoadas tem sido alvo de grandes pesquisas, a empresa NEC Corporation é pioneira neste assunto, em 2015 ela anunciou uma das primeiras tecnologias de análise de comportamento de multidões do mundo.O objetivo desta tecnologia é 
+manter  uma sociedade segura e protegida.
+\par Neste artigo iremos realizar o estudo do estado da arte na área de análises de multidões, fazendo comparações de trabalhos relacionados ao tema.
+
+\section{Aplicação de técnicas para análise de multidões \\na segurança}
+O uso das técnicas para análise de multidões vem se destacando e tem obtido grandes resultados em vários campos,principalmente na segurança em geral.
+Atualmente,já existem sistemas que são capazes de detectar situações anormais  em áreas com grande tráfego de pessoas.Através de câmeras instaladas e com base em cenas analisadas em tempo real muitos crimes ou quaisquer outros incidentes podem ser detectados com mais agilidade ou até evitados.
+\par Para a segurança de pedestres, câmeras são capazes de detectar se  veículos estão em uma velocidade anormal ou se trafegam em áreas proibidas para automóveis.\par Nas grandes cidades softwares são utilizados para contagem e identificação de pessoas que trafegam em locais públicos, isso facilita o gerenciamento da segurança. Locais como aeroportos,parques e estações ferroviárias são propício  a um fluxo elevado de pessoas, sendo assim sistemas capazes de analisar multidões são de extrema importância.
+\par O uso de simulação de multidões são utilizados para avaliar os níveis de segurança de alguns locais como shopping e boates, pois são locais propícios a superlotação,o uso da simulação ajuda a verificar se o local comporta certo número de pessoas e em caso de incidentes qual seria o tempo necessário para o processo de  evacuação.
+\newpage
+\section{Trabalhos Relacionados}
+Neste capítulo iremos será apresentado de forma sucinta algumas publicações relacionados à área de análises de multidões.
+
+\subsection{Desenvolvimento de Um Software de Identificação e Contagem de Pessoas em Imagens }
+No artigo\cite{SOARES et.al} é proposto um software que identifica e faz a contagem de pessoas em imagens com foco na contagem de multidões.Como método para o desenvolvimento deste trabalho o sistema foi implementado na linguagem de programação Java.Para fazer a identificação e contagem de pessoas, foi utilizada a biblioteca JavaCV, que pertence ao conjunto de bibliotecas do OpenCV e  que trazem implementado o classificador de Haar,essas bibliotecas possuem diversos algoritmos de Processamento de Imagem e Visão Computacional.\par Um classificador Haar pode detectar várias estruturas,é uma ferramenta poderosa utilizada para reconhecer padrões.A implementação do algoritmo de contagem e identificação foi dividido em pré-processamento da imagem,detecção de pessoas e contagem e criar uma nova imagem as pessoas encontradas na imagem.\par O software teve eficiência na detecção de pessoas quando o rosto era virado para frente da câmera, mas quando isso não acontecia,o software não funcionou corretamente, ele detectou como sendo uma pessoa uma parte da imagem que não era uma pessoa.
+\subsection{Support Vector Machine-Based Human Behavior Classification in Crowd through Projection and Star Skeletonization}
+O artigo\cite{M et.al}propõe um sistema para verificação de alteração em um ambiente movimentado. Utilizando técnicas de projeção de esqueletização com estrela em tempo real, classifica comportamentos normais e anormais em multidões com objetivos de monitoramentos em ambientes lotados.
+\par O Sistema Máquina de Suporte com Vetores (SVM) separa indivíduos usando a esqueletização e características como a postura e sinais de movimentos cíclicos. Usando esses sinais o (SVM) conseguiu classificar diversos comportamentos normais e anormais de um humano. Ele primeiro detecta uma mancha de pixels em primeiro plano usando subtração de fundo, em seguida as manchas são agrupadas para a fase de segmentação, onde são selecionadas e divididas em indivíduos quando a oclusão acontece. Para detectar anomalias o contorno é extraído e em seguida é medido as distâncias a partir do centróide de cada ponto, os locais mínimos e máximos de cada mancha são selecionadas e formam esqueletos de um corpo humano então o (SVM) classifica se o comportamento é normal ou anormal.
+\par Assim os dados processados são aprendidos através de uma máquina de vetor de suporte para classificar os comportamentos em duas classes. O sistema proposto detectou os seguintes comportamentos anormais: pessoas correndo no meio da multidão, curvando-se, acenando; e normais:pessoas simplesmente caminhando.
+\newpage
+\section{Conclusão}
+É fato que sistemas para análise de multidões são indispensáveis nos dias de hoje, principalmente quando se trata da segurança de humanos.\par O artigo \cite{SOARES et.al} apresentou uma técnica para identificar pessoas em uma multidão, porém não teve um resultado satisfatório pois o algoritmo obteve falhas no momento da identificação de pessoas quando o rosto era virado para frente da câmera, então propuseram melhorias para solucionar o problema.
+\par Já no artigo\cite{M et.al} os pesquisadores conseguem bons resultados identificando comportamentos normais e anormais  na multidão, porém os processos utilizados são mais complexos.
+\par Muitas pesquisas têm obtido grandes avanços na área, mas há grandes dificuldades no desenvolvimento de sistemas capazes de extrair informações de cenas com um número elevado de indivíduos, pois algoritmos para análise de informações desse tipo de ambientes são complexos e lidam com princípios matemáticos sofisticados. 
+
+
+
+
+\begin{thebibliography}{4}
+\bibitem {NEC}NEC Orchestrating a brighter world. \textbf{\textit{NEC Fornece Sistema de Controle de Desastres com Tecnologia de Análise de Comportamento de Multidões em Tóquio A Tecnologia Detecta mudanças no comportamento de multidões e promove mais segurança.}}
+\url{Disponível em:http:br.nec.com/pt_BR/press/201503/20150316_01.html}Acesso em 18 de out.2016.
+\bibitem {NAVEGA} NAVEGA,S.\textbf{\textit{Sistemas Inteligentes de Processamento de Imagem.}}Unisanta, Setembro 2007.
+\bibitem {SANTOS et.al} SANTOS,C.O.,MELO,E.N.,MOURA.M.J.C.(2014).\textbf{\textit{O Efeito da Segurança e do Estudo de Layout na Simulação de Evacuação de Multidão.Estudo de Caso em Casa Noturna.}}Curitiba, PR, Brasil,outubro 2014.
+\bibitem {SOARES et.al}SOARES,D.G., ANGIOLETTI,T.H., SANTOS,L.F., ZANOTO,P.H.,CIPRIANI,.P.
+\textbf{\textit{Desenvolvimento de Um Software de Identificação e Contagem de Pessoas em Imagens.}}
+Araquari,SC,novembro 2014.
+\bibitem {M et.al}M. Archana B. Yogameena, E. Komagal and S. Raju Abhaikumar.
+\textbf{\textit{Support vector machine-based human behavior classication in crowd through projection and star skeletonization.}}
+JCS, pages 6, 2010.
+
+
+\end{thebibliography}%fim das referencias
+\thispagestyle{empty}
+\end{document}%fim do documento
